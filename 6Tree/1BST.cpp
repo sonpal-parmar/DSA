@@ -6,7 +6,7 @@ struct Node {
     Node* left;
     Node* right;
 };
-
+//hello
 class BST {
 private:
     Node* root;
