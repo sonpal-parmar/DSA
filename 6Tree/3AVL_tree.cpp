@@ -83,7 +83,7 @@ Node *insertNode(Node *node, int key) {
   else
     return node;
 
-  // Update the balance factor of each node and
+  // Update the balance factor of each node and.
   // balance the tree
   node->height = 1 + max(height(node->left),
                height(node->right));
