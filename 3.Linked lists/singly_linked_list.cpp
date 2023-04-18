@@ -10,7 +10,7 @@ struct Node{
         next=NULL;
     }
 };
-//travarsal without recursion
+//travarsal without recursion.
 void printlist(Node *head){
     Node *curr=head;
     while(curr!=NULL)
