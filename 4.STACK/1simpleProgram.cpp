@@ -39,7 +39,7 @@ public:
       return data_[top_];
     } else {
       std::cout << "Stack is empty!" << std::endl;
-      return -1; // or throw an exception
+      return -1;
     }
   }
 
