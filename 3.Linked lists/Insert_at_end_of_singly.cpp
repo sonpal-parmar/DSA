@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//create node
+////create node
 struct Node
 {
     int data;
