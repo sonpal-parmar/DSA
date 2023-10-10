@@ -16,6 +16,7 @@ public:
     Stack() {
         top = NULL;
     }
+// clear memory 
     ~Stack() {
         Node* current = top;
         while (current != NULL) {
