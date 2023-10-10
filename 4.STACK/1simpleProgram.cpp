@@ -61,6 +61,7 @@ int main() {
   stack.push(40); // this will not be added as stack is full
 
   std::cout << "Stack size: " << stack.size() << std::endl;
+// check condition stack is empaty
 
   while (!stack.empty()) {
     std::cout << "Top element: " << stack.top() << std::endl;
