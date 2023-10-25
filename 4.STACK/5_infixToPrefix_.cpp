@@ -12,42 +12,33 @@ int precedence(char op) {
 string infixToPrefix(string exp) {
     stack<char> s;
     string prefix = "";
-    
-    // Reverse the input expression to make it easier to convert to prefix.
     reverse(exp.begin(), exp.end());
 
     for (char c : exp) {
         if (isalnum(c)) {
-            prefix += c; // If the character is an operand, add it to the prefix expression.
+            prefix += c; 
         } else if (c == ')') {
-            s.push(c); // If it's a closing parenthesis, push it onto the stack.
+            s.push(c);
         } else if (c == '(') {
-            // If it's an opening parenthesis, pop and add operators from the stack to the prefix
-            // expression until a closing parenthesis is encountered.
+           
             while (!s.empty() && s.top() != ')') {
                 prefix += s.top();
                 s.pop();
             }
-            s.pop(); // Pop the closing parenthesis.
+            s.pop();
         } else {
-            // If it's an operator, pop and add operators from the stack to the prefix expression
-            // until an operator with lower or equal precedence is encountered, then push the current
-            // operator onto the stack.
-            while (!s.empty() && precedence(c) < precedence(s.top())) {
+           while (!s.empty() && precedence(c) < precedence(s.top())) {
                 prefix += s.top();
                 s.pop();
             }
             s.push(c);
         }
     }
-
-    // Pop and add any remaining operators from the stack to the prefix expression.
     while (!s.empty()) {
         prefix += s.top();
         s.pop();
     }
     
-    // Reverse the final prefix expression to get the correct order.
     reverse(prefix.begin(), prefix.end());
 
     return prefix;
