@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//mergesort
 void merge(int a[],int l,int m, int r)
 {
    int n1=m-l+1;
