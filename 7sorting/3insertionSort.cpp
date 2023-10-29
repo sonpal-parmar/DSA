@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//insertion sort
 int main()
 {
     int a[] = {78,56,75,25,11,52,45,3,8,1,98,95,85};
