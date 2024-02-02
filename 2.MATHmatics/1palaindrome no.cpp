@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-
+// palindrome
 int main()
 {   int n;
     cout <<"enter a palindrome number: ";
